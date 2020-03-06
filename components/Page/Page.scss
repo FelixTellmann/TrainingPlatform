@@ -1,0 +1,17 @@
+.page {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: .6rem;
+  background-color: #fff;
+  box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, .2);
+}
+
+.page__content {
+  padding-top: 8rem;
+  padding-right: 6.4rem;
+  padding-bottom: 8rem;
+  padding-left: 12.8rem;
+}
+

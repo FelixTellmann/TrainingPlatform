@@ -1,0 +1,27 @@
+.frame {
+  display: grid;
+  grid-template-columns: 1fr 340px 1060px 1fr;
+  grid-template-rows: 140px 1fr 100px;
+  grid-template-areas: ". topbar topbar ." ". sidebar main ." ". footer footer .";
+  min-height: 100vh;
+  padding: 0 30px;
+  background-color: #f4f6f8;
+  color: #161d25;
+}
+
+.frame__topbar {
+  grid-area: topbar;
+}
+
+
+.frame__sidebar {
+  grid-area: sidebar;
+}
+
+.frame__main {
+  grid-area: main;
+}
+
+.frame__footer {
+  grid-area: footer;
+}

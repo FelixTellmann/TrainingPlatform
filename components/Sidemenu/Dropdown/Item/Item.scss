@@ -1,0 +1,116 @@
+
+.sidemenu {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.sidemenu__link {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  
+  &:hover, &.active {
+    .sidemenu__icon {
+      background-color: #202e78;
+    }
+    
+    .sidemenu__text {
+      color: #5c6ac4;
+    }
+  }
+}
+
+.sidemenu__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  padding: 12px;
+  border-radius: 100%;
+  background-color: #5c6ac4;
+  color: white;
+  transition: background-color .24s cubic-bezier(.64, 0, .35, 1);
+}
+
+.sidemenu__text {
+  grid-area: sidemenu__text;
+  color: #637381;
+  font-size: 18px;
+  font-weight: 400;
+  transition: color .24s cubic-bezier(.64, 0, .35, 1), font-weight .24s cubic-bezier(.64, 0, .35, 1), transform .24s cubic-bezier(.64, 0, .35, 1);
+}
+
+
+.dropdown {
+  margin-left: 48px;
+}
+
+.dropdown__link, .dropdown__list__link {
+  display: block;
+  padding: 8px 16px;
+  
+  &:hover, &.active {
+    .dropdown__text {
+      color: #5c6ac4;
+      transform: translateX(16px);
+      
+      &:before {
+        left: -18px;
+        opacity: 1;
+        border-left: 4px solid #202e78;
+      }
+    }
+  }
+}
+
+.dropdown__text {
+  position: relative;
+  display: block;
+  color: #637381;
+  font-size: 16px;
+  transition: color .24s cubic-bezier(.64, 0, .35, 1), font-weight .24s cubic-bezier(.64, 0, .35, 1), transform .24s cubic-bezier(.64, 0, .35, 1);
+  transform: translateX(0);
+  will-change: color, font-weight, transform;
+  
+  &:before {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 23px;
+    opacity: 0;
+    border-left: 0 solid rgba(0, 0, 0, 0);
+    content: '';
+    transition: .24s cubic-bezier(.64, 0, .35, 1);
+  }
+}
+
+.dropdown__list {
+  display: none;
+  padding-left: 16px;
+  
+  &:hover, &.active, &.active {
+    display: block;
+  }
+}
+
+.dropdown__list__link {
+  display: block;
+  color: #637381;
+  font-size: 13px;
+  line-height: 14px;
+  transition: color .24s cubic-bezier(.64, 0, .35, 1), font-weight .24s cubic-bezier(.64, 0, .35, 1), transform .24s cubic-bezier(.64, 0, .35, 1);
+  transform: translateX(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: color, font-weight, transform;
+  
+  &:hover, &.active {
+    color: #5c6ac4;
+  }
+}
+
+
+

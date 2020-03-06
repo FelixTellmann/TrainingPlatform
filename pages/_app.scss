@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html {
+  box-sizing: border-box;
+  margin-left: calc(100vw - 100%);
+  /* Load system fonts */
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+  /* Make type rendering look crisper */
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  /* Disable auto-enlargement of small text in Safari */
+  -moz-osx-font-smoothing: grayscale;
+  /* Enable kerning and optional ligatures */
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/**
+ * Form elements render using OS defaults,
+ * so font-family inheritance must be specifically declared
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, td, th, input, textarea {
+  background-color: #ebeced;
+  font-family: 'Lato', Segoe UI, Tahoma, Arial, sans-serif;
+  font-size: 10px;
+  line-height: 19px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+input {
+  outline: none;
+  background: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:-webkit-any-link:active {
+  color: grey;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, li, ol, p, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  max-width: 60rem;
+  margin-bottom: .5em;
+  font-size: 4.8rem;
+  font-weight: 600;
+  line-height: 1;
+  
+  + p {
+    max-width: 60rem;
+    color: #454f5b;
+    font-size: 2.4rem;
+    line-height: 1.55;
+  }
+}
+
+button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 0;
+}
+
+.old-wrapper {
+  display: block;
+  max-width: 1670px;
+  max-height: 100%;
+  margin: auto;
+  @media (min-width: 768px) {
+    width: 725px;
+  }
+  @media (min-width: 992px) {
+    width: 945px;
+  }
+  @media (min-width: 1200px) {
+    width: 1145px;
+  }
+  @media (min-width: 1300px) {
+    width: 1270px;
+  }
+  @media (min-width: 1400px) {
+    width: 1370px;
+  }
+  @media (min-width: 1500px) {
+    width: 1470px;
+  }
+  @media (min-width: 1700px) {
+    width: 1670px;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px 1060px 1fr;
+  grid-template-rows: 140px 1fr 100px;
+  grid-template-areas: ". header header ." ". aside main ." ". footer footer .";
+  min-height: 100vh;
+  padding: 0 30px;
+  background-color: #f4f6f8;
+  color: #161d25;
+}
+
+.layout__head {
+  grid-area: header;
+}
+
+.layout__aside {
+  grid-area: aside;
+}
+
+.layout__main {
+  grid-area: main;
+}
+
+.layout__footer {
+  grid-area: footer;
+}

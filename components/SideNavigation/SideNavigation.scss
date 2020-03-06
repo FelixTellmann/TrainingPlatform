@@ -1,0 +1,42 @@
+
+.secondary-nav {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.secondary-nav__link {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  
+  &:hover, &:focus, &:active {
+    .secondary-nav__icon {
+      background-color: #202e78;
+    }
+    
+    .secondary-nav__text {
+      color: #5c6ac4;
+    }
+  }
+  
+}
+
+.secondary-nav__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  padding: 12px;
+  border-radius: 100%;
+  background-color: #5c6ac4;
+  color: white;
+  transition: background-color .24s cubic-bezier(.64, 0, .35, 1);
+}
+
+.secondary-nav__text {
+  grid-area: secondary-nav__text;
+  color: #637381;
+  font-size: 18px;
+  font-weight: 400;
+  transition: color .24s cubic-bezier(.64, 0, .35, 1), font-weight .24s cubic-bezier(.64, 0, .35, 1), transform .24s cubic-bezier(.64, 0, .35, 1);
+}

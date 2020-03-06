@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 6px;
+  padding: 0 10px;
+  border-top: 6px solid transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.4s;
+  
+  &.active {
+    border-top: 6px solid darkblue;
+  }
+  
+  &:hover, &:active, &:focus {
+    border-top: 6px solid dodgerblue;
+    
+    .nav__text {
+      color: dodgerblue;
+    }
+  }
+}
